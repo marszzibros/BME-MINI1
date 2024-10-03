@@ -126,7 +126,7 @@ class TransformerModel(nn.Module):
 
         x = self.feature_extraction(x).permute(0,2,1)
 
-        # x: BS, BPWF, F (BS, 170, 32)
+        # x: BS, L, F (BS, 170, 32)
         # BPWF: base pair windows features
         # F: Features 
         x = self.embedding(x)
